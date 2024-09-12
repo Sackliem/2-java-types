@@ -5,8 +5,16 @@ public class Task05 {
     public static String solution(int x) {
 
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
+        String numberStr = String.valueOf(x);
 
-        return "FALSE";
+        for (char digitChar : numberStr.toCharArray()) {
+            int digit = Character.getNumericValue(digitChar);
+            if (digit % 2 != 0) {
+                return "FALSE";
+            }
+        }
+
+        return "TRUE";
     }
 
     public static void main(String[] args) {
